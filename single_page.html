@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en">
+   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT|Sacramento&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f1364fd64f.js"></script>
+    <title>Single Room - Hotel</title>
+  </head>
+  <body>
+    <div id="search" class="search-popup">
+      <i id="close" class="fas fa-times text-white p-3"></i>
+      <form class="form-inline">
+        <input type="search" placeholder="Search" aria-label="Search">
+        <i id="fa-search" class="fas fa-search align-self-center"></i>
+      </form>
+    </div>
+    <section class="header-slider">
+      <header class="bg-white">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 d-lg-block d-md-none d-sm-none d-none">
+              <button id="btn"class="menu-btn">
+                <i class="fas fa-bars text-body"></i>
+              </button>
+              <div id="popup-menu" class="wrapper p-3">
+                <i class="fas fa-arrow-left"></i>
+                <div class="sidebar-header text-center">
+                  <img src="img/logo-hotel.png" class="img-fluid">
+                </div>
+                <nav id="sidebar" class="py-5 my-5">
+                  <ul class="list-unstyled components">
+                    <li>
+                      <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
+                        <ul class="collapse list-unstyled text-right" id="homeSubmenu">
+                          <li><a href="city_hotel.html">Beach Resort</a></li>
+                          <li><a href="city_hotel.html">Boutique Hotel</a></li>
+                          <li><a href="city_hotel.html">Hostel</a></li>
+                          <li><a href="city_hotel.html">Farm House</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li>
+                    <a href="#roomSubmenu" data-toggle="collapse" aria-expanded="false">Rooms</a>
+                      <ul class="collapse list-unstyled" id="roomSubmenu">
+                        <li><a href="#">Room 1</a></li>
+                        <li><a href="#">Room 2</a></li>
+                        <li><a href="#">Room 3</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                    <a href="events.html">Events</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                  </ul>
+                </nav>
+                <h5 class="font-weight-bold text-center">Follow Us</h5>
+                <div class="row d-flex justify-content-center py-5">
+                  <a href="#"><i class="fab fa-facebook-f fa-2x mx-2"></i></i></a>
+                  <a href="#"><i class="fab fa-twitter fa-2x mx-2"></i></a>
+                  <a href="#"><i class="fab fa-instagram fa-2x mx-2"></i></a>
+                  <a href="#"><i class="fab fa-tripadvisor fa-2x mx-2"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-4 text-lg-center">
+              <a href="index.html"><img src="img/logo-hotel.png" class="img-fluid"></a>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-4 col-xs-4">
+              <div class="row d-flex search-lang">
+                 <a href="#" class="align-self-center search-zoom"><i class="fas fa-search text-body"></i></a>
+                <div class="dropdown mx-3 align-self-center">
+                  <a class="btn dropdown-toggle text-body" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    EN
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">English</a>
+                    <a class="dropdown-item" href="#">Deutsch</a>
+                    <a class="dropdown-item" href="#">France</a>
+                  </div>
+                </div>
+                <a href="rooms.html" class="align-self-center button d-lg-block d-sm-none d-none">BOOK NOW</a>
+              </div>
+            </div>
+            <div class="col-md-2 d-lg-none d-md-block col-sm-4 col-xs-4 navbar-light">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+            <div class="menu mx-auto">
+              <nav class="navbar navbar-expand-lg navbar-light py-0">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link second-hover" href="index.html">Home</a>
+                        <ul class="list-unstyled hover">
+                          <li><a href="city_hotel.html">Home - Beach Resort</a></li>
+                          <li><a href="city_hotel.html">Home - Boutique Hotel</a></li>
+                          <li><a href="city_hotel.html">Home - City Hotel</a></li>
+                          <li><a href="city_hotel.html">Home - Farm House</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link second" href="rooms.html">Rooms</a>
+                      <ul class="list-unstyled hover">
+                        <li><a href="rooms.html">Rooms - Luxury</a></li>
+                        <li><a href="rooms.html">Rooms - President</a></li>
+                        <li><a href="rooms.html">Rooms - Retro</a></li>
+                        <li><a href="rooms.html">Rooms - Classic</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link second-hover" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link second-hover" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link second-hover" href="about_us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link second-vover" href="contact_us.html">Contact Us</a>
+                    </li>
+                   </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+        <div class="page-title">
+          <div class="second-title">
+            <h1 class="text-body">Classic Balcony Room</h1>
+            <div class="py-3 d-flex justify-content-center">
+              <a href="index.html" class="text-body mr-2">Home /</a>
+              <a href="rooms.html" class="text-body mr-2">Rooms</a>
+              <span class="text-muted"> / Classic Balcony Room </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="single_page">
+        <div class="container">
+          <div class="row justify-content-between px-3">
+            <h2>Classic Balcony Room</h2>
+            <p class="align-self-center">from<span>$99.00</span>/night</p>
+          </div>
+          <div class="row">
+            <div class="col-lg-9 col-md-12 pb-3">
+              <div id="carousel3" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/hotel-room1.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/hotel-room3.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/hotel-room2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                   <div class="carousel-item">
+                    <img src="img/hotel-room4.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                 <div class="controls-bottom">
+                    <a class="carousel-control-prev" href="#carousel3" role="button" data-slide="prev">
+                      <span class="carousel-control" aria-hidden="true"><i class="fas fa-chevron-left text-white"></i></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel3" role="button" data-slide="next">
+                      <span class="carousel-control" aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                </div>
+                <ul class="list-unstyled">
+                  <li><a href="#"><img src="img/room1.jpg"></a></li>
+                  <li><a href="#"><img src="img/room1.jpg"></a></li>
+                  <li><a href="#"><img src="img/room1.jpg"></a></li>
+                  <li class="d-xl-block d-lg-none d-none"><a href="#"><img src="img/room1.jpg"></a></li>
+                  <li class="d-xl-block d-lg-none d-none"><a href="#"><img src="img/room1.jpg"></a></li>
+                  <li class="d-xl-block d-lg-none d-none"><a href="#"><img src="img/room1.jpg" class="pr-0"></a></li>
+                </ul>
+                <div class="row">
+                  <div class="col-md-3 col-sm-12 tab pr-0">
+                    <div class="nav flex-column" role="tablist" aria-orientation="vertical">
+                      <a class="nav-link active" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Description</a>
+                      <a class="nav-link" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Amenities</a>
+                      <a class="nav-link" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Rates</a>
+                      <a class="nav-link" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Reviews</a>
+                    </div>
+                  </div>
+                  <div class="col-md-9 col-sm-12 content">
+                    <div class="tab-content" id="v-pills-tabContent">
+                      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"><p>Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. </p>
+                      <a href="#">View FLOOR PLAN</a>
+                      </div>
+                      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                         <div class="row">
+                          <div class="col-6 facilities">
+                            <ul class="list-unstyled">
+                              <li><i class="fas fa-bed"></i>Double bed</li>
+                              <li><i class="fas fa-bath"></i>Bathroom</li>
+                              <li><i class="fas fa-shower"></i>Shower</li>
+                              <li><i class="fas fa-glass-martini-alt"></i>Mini-bar</li>
+                              <li><i class="fas fa-tv"></i>TV</li>
+                            </ul>
+                          </div>
+                           <div class="col-6 facilities">
+                            <ul class="list-unstyled">
+                              <li><i class="fas fa-phone"></i>Telephone</li>
+                              <li><i class="fas fa-wifi"></i>Wireless connect</li>
+                              <li><i class="fas fa-fan"></i>Air conditioner</li>
+                              <li><i class="fas fa-paw"></i>Pets allowed</li>
+                              <li><i class="fas fa-concierge-bell"></i>24h room service (at extra charge)</li>
+                            </ul>
+                          </div>
+                         </div>
+                      </div>
+                      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                       <table class="table table-bordered">
+                        <tbody>
+                          <tr>
+                            <td>Main season 1</td>
+                            <td>10 Mar – 30 Apr 2018</td>
+                            <td>$99.00/night</td>
+                          </tr>
+                          <tr>
+                            <td>Christmas & New Year's</td>
+                            <td>22 Dec 2018 - 6 Jan 2019</td>
+                            <td>$299.00/night</td>
+                          </tr>
+                          <tr>
+                            <td>Main season 2</td>
+                            <td>1 May – 31 Oct 2018</td>
+                            <td>$249.00/night</td>
+                          </tr>
+                          <tr>
+                            <td>School holidays</td>
+                            <td>2 Feb - 9 Mar 2019</td>
+                            <td>$199.00/night</td>
+                          </tr>
+                          <tr>
+                            <td>Main season 3</td>
+                            <td>1 Nov – 21 Dec 2018 </td>
+                            <td>$129.00/night</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      </div>
+                      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                        <div class="row">
+                          <div class="col-lg-2 col-md-3 score">
+                            <span>8.5</span>
+                            <span>Good</span>
+                          </div>
+                          <div class="col-lg-10 col-md-9 progress-bars">
+                            <div class="d-flex justify-content-between">
+                              <span>Accommodation</span>
+                              <span>8</span>
+                            </div>
+                            <div class="bar">
+                              <div class="progress"></div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                              <span>Location</span>
+                              <span>9</span>
+                            </div>
+                            <div class="bar">
+                              <div class="progress"></div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                              <span>Meals</span>
+                              <span>8</span>
+                            </div>
+                            <div class="bar">
+                              <div class="progress"></div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                              <span>Facilities</span>
+                              <span>8</span>
+                            </div>
+                            <div class="bar">
+                              <div class="progress"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="reviews mt-3 px-0">
+                          <h4>Reviews</h4>
+                          <div class="row">
+                            <div class="col-lg-2 col-md-3">
+                              <img src="img/user.jpg" class="img-fluid">
+                            </div>
+                            <div class="col-lg-10 col-md-9">
+                              <h6>Helene M.</h6>
+                              <div class="row d-flex justify-content-between px-3">
+                                <span>October 17, 2018 at 2:41 pm</span>
+                                <ul class="list-unstyled list-horizontal pt-0">
+                                  <li><i class="far fa-star"></i></li>
+                                  <li><i class="far fa-star"></i></li>
+                                  <li><i class="far fa-star"></i></li>
+                                  <li><i class="far fa-star"></i></li>
+                                  <li><i class="far fa-star"></i></li>
+                                </ul>
+                              </div>
+                              <p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros.</p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-2 col-md-3">
+                              <img src="img/user_customer.jpg" class="img-fluid">
+                            </div>
+                            <div class="col-lg-10 col-md-9">
+                              <h6>Helene M.</h6>
+                              <div class="row d-flex justify-content-between px-3">
+                                <span>October 17, 2018 at 2:41 pm</span>
+                                <ul class="list-unstyled list-horizontal pt-0">
+                                  <li><i class="far fa-star"></i></li>
+                                  <li><i class="far fa-star"></i></li>
+                                  <li><i class="far fa-star"></i></li>
+                                  <li><i class="far fa-star"></i></li>
+                                  <li><i class="far fa-star"></i></li>
+                                </ul>
+                              </div>
+                              <p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="add-review">
+                          <h4>Add a Review</h4>
+                          <p>Your email address will not be published. Fields marked with an * are required.</p>
+                          <form>
+                            <div class="form-group">
+                              <label for="NameInput">Your Name *</label>
+                              <input type="text" class="form-control" id="formGroupNameInput">
+                            </div>
+                            <div class="form-group">
+                              <label for="EmailInput">Your Email *</label>
+                              <input type="text" class="form-control" id="formGroupEmailInput">
+                            </div>
+                            <div class="rating">
+                              <label for="forlistgroup">Rating *</label>
+                                <ul class="list-unstyled list-horizontal pt-0">
+                                  <li><i class="far fa-star p-1"></i></li>
+                                  <li><i class="far fa-star p-1"></i></li>
+                                  <li><i class="far fa-star p-1"></i></li>
+                                  <li><i class="far fa-star p-1"></i></li>
+                                  <li><i class="far fa-star p-1"></i></li>
+                                </ul>
+                            </div>
+                             <div class="form-group">
+                              <label for="textarea">Comment *</label>
+                              <textarea class="form-control" id="textarea" rows="3"></textarea>
+                            </div>
+                          </form>
+                          <a href="#" class="button-gray text-white">SUBMIT REVIEW</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-12 rooms-list pt-0">
+              <div class="sidebar">
+                <h5>Check Availability</h5>
+                <span>Required fields are followed by *</span>
+                <div class="select-date">
+                  <label for="start">Select Hotel Location</label>
+                  <div class="row d-flex justify-content-between px-3">
+                    <p>Italy,Rome</p>
+                    <a href="#"><i class="fas fa-map-marker-alt text-white"></i></a>
+                  </div>
+                </div>
+                <div class="select-date">
+                  <label for="start">Arrival Date *</label>
+                  <input type="date" name="date">
+                </div>
+
+                <div class="select-date">
+                  <div class="row">
+                    <div class="col-6">
+                      <label for="start">Room Type</label>
+                      <select class="selectpicker">
+                        <option>Classic</option>
+                        <option>Retro</option>
+                        <option>Luxury</option>
+                      </select>
+                    </div>
+                    <div class="col-6">
+                      <label for="start">Rooms</label>
+                      <select class="selectpicker">
+                        <option>Classic</option>
+                        <option>Retro</option>
+                        <option>Luxury</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="select-date">
+                  <div class="row">
+                    <div class="col-6">
+                      <label for="start">Adults</label>
+                      <select class="selectpicker">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>More</option>
+                      </select>
+                    </div>
+                    <div class="col-6">
+                      <label for="start">Children</label>
+                      <select class="selectpicker">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="select-date">
+                  <label for="start">price per night</label>
+                  <div class="row">
+                    <div class="col-6">
+                      <select class="selectpicker">
+                        <option>75  £</option>
+                        <option>100  £</option>
+                        <option>125  £</option>
+                        <option>150  £</option>
+                        <option>More  £</option>
+                      </select>
+                    </div>
+                    <div class="col-6">
+                      <select class="selectpicker">
+                        <option>75  £</option>
+                        <option>100  £</option>
+                        <option>125  £</option>
+                        <option>150  £</option>
+                         <option>More  £</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="checkbox py-3">
+                  <div class="form-check">
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                    <label class="form-check-label" for="inlineCheckbox1">Air conditioner</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                    <label class="form-check-label" for="inlineCheckbox1">Balcony</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                    <label class="form-check-label" for="inlineCheckbox1">Family rooms</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                    <label class="form-check-label" for="inlineCheckbox1">Fitness center</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                    <label class="form-check-label" for="inlineCheckbox1">Flat-screen TV</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                    <label class="form-check-label" for="inlineCheckbox1">Non-smoking rooms</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                    <label class="form-check-label" for="inlineCheckbox1">Parking</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                    <label class="form-check-label" for="inlineCheckbox1">Pets allowed</label>
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="d-flex justify-content-center button">CHECK AVAILABILITY</a>
+
+              <div class="banner my-5">
+                <img src="img/wedding.jpg" class="img-fluid">
+                <div class="overlay"></div>
+                <div class="text-overlay text-center">
+                  <h4>Offers & Packages</h4>
+                  <p class="text-center">Donec eget tellus non erat lacinia fermentum. Donec in velit vel ipsum auctor pulvinar.</p>
+                  <a href="#" class="font-weight-bold">EXPLORE MORE</a>
+                </div>
+              </div>
+
+              <div class="other-rooms">
+                <div class="d-flex mt-3">
+                  <div class="col-xl-5 col-lg-6 px-0">
+                    <img src="img/hotel-room2.jpg" class="img-fluid">
+                  </div>
+                  <div class="col-xl-7 col-lg-6">
+                    <a href="single_page.html"><h5>Superior Duble Room</h5></a>
+                    <p>FROM $199.00/NIGHT</p>
+                  </div>
+                </div>
+                <div class="d-flex mt-3">
+                  <div class="col-xl-5 col-lg-6 px-0">
+                    <img src="img/hotel-room4.jpg" class="img-fluid">
+                  </div>
+                  <div class="col-xl-7 col-lg-6">
+                    <a href="single_page.html"><h5>Superior Duble Room</h5></a>
+                    <p>FROM $299.00/NIGHT</p>
+                  </div>
+                </div>
+                <div class="d-flex mt-3">
+                  <div class="col-xl-5 col-lg-6 px-0">
+                    <img src="img/hotel-room3.jpg" class="img-fluid">
+                  </div>
+                  <div class="col-xl-7 col-lg-6">
+                    <a href="single_page.html"><h5>Delux Double Room</h5></a>
+                    <p>FROM $399.00/NIGHT</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </section>
+        <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 contacts">
+              <h5 class="text-white">CONTACT US</h5>
+              <p>Address: <span>9863 - 9867 Mill Road,Cambridge, MG09 99HT</span></p>
+              <p>Phone: <span>+1 800 603 6035</span></p>
+              <p>Fax: <span>+1 800 889 9898 </span></p>
+              <p>Email: <span>mail@companyname.com</span></p>
+            </div>
+            <div class="col-lg-3 col-md-6 main-menu">
+              <h5 class="text-white">MAIN MENU</h5>
+               <ul class="list-unstyled">
+                 <li><a href="about_us.html">About</a></li>
+                 <li><a href="#">Special Offers</a></li>
+                 <li><a href="#">News</a></li>
+                 <li><a href="contact_us.html">Contact Us</a></li>
+               </ul>
+            </div>
+            <div class="col-lg-3 main-menu">
+              <h5 class="text-white">THINGS TO DO</h5>
+               <ul class="list-unstyled">
+                 <li><a href="#">Wellness & Spa</a></li>
+                 <li><a href="#">Restaurants & Bars</a></li>
+                 <li><a href="#">Excursions</li>
+                 <li><a href="events.html">Events</a></li>
+               </ul>
+            </div>
+            <div class="col-lg-3 main-menu">
+              <h5 class="text-white">ROOMS & SUITS</h5>
+               <ul class="list-unstyled">
+                 <li><a href="rooms.html">Classic</a></li>
+                 <li><a href="rooms.html">Superiora</a></li>
+                 <li><a href="rooms.html">Deluxe</a></li>
+                 <li><a href="rooms.html">Master</a></li>
+               </ul>
+            </div>
+          </div>
+          <div class="col-12 text-center">
+            <p class="text-muted mb-0">Copyright &copy; 2019 Milenia Luxury Hotel. All Rights Reserved.</p>
+          </div>
+        </div>
+      </footer>
+        
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
+  <script src="js/main.js" type="text/javascript"></script>
+  </body>
+</html>
