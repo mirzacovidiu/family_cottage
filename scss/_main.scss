@@ -1,0 +1,1355 @@
+body{
+    position: relative;
+    font-family: $font-open-sans;
+    .search-popup{
+      position: absolute;
+      position: fixed;
+      width: 100%;
+      @extend %position;
+      display: none;
+      background:linear-gradient(90deg, rgba(25,25,23,.85) 6%, rgba(23,22,20,.85) 100%);
+      z-index: 3;
+      form{
+        position: absolute;
+        top: 50%;
+        left:0;
+        right: 0;
+        margin: auto;
+        width: 60%;
+        @include media-breakpoint-down(sm) { 
+          width: 85%; 
+        }
+        input{
+          border:none;
+          width:calc(100% - 3.7rem);
+          padding: 1.17rem;
+          font-size: .85rem;
+        }
+        i{
+          background-color: $btn-color;
+          padding: 1.3rem;
+          margin: 0;
+          color: $white;
+        }
+      }
+      #close{
+        position: absolute;
+        color: $white;
+        top: 30%;
+        right: 2%;
+      }
+    }   
+    a{
+        text-decoration: none!important;
+      transition:all .3s ease-in;
+      z-index: 300;
+    }
+    hr{
+      height: .07rem;
+      background-color: $white;
+    }
+    p{
+      font-size: .8rem;
+      color: $main-text;
+    }
+    .blue-hover{
+      @extend %blue-hover;
+    }
+    .blue{
+      @extend %blue;
+    }
+    .second-hover{
+      @extend %second-hover;
+    }
+    .second{
+      @extend %second;
+    }
+    .location{
+      @include media-breakpoint-down(lg) { 
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .title{
+      text-transform: uppercase;
+      font-size: .8rem;
+      color: $secondary;
+      letter-spacing:.2rem;
+      padding: 8rem 0 2rem;
+    }
+    .second-title{
+      padding: 12rem 0 5rem;
+    }
+    .controls-bottom{
+      position: relative;
+      width: 5.5rem;
+      &>a{
+        top: auto;
+        width: auto;
+      }
+    }
+    h2{
+      @include media-breakpoint-down(lg) {
+        font-size: 2rem; 
+      }
+      font-family: $font-family;
+      font-size: 3rem;
+      padding: .5rem 0 1rem;
+    }
+     h6{
+      text-transform: uppercase;
+      letter-spacing: $letter-spacing;
+      color: $brown;
+      font-size: .7rem;
+    }
+    h3,h4,h5{
+      font-family: $font-family;
+    }
+    h5{
+      @include media-breakpoint-down(lg) {
+        font-size: 1rem;
+      }
+    }
+    label{
+      font-size: .8rem;
+      color:$main-text;
+    }
+    .card{
+      border:none;
+    }
+    .news-letter{
+      display: flex;
+      justify-content:center;
+        input{
+          width: calc(100% - 3.7rem);
+          border:$gray-border;
+          background-color: $gray;
+          padding: 1.1rem 0 1.1rem 1rem;
+          font-size: .8rem;
+          outline:0;
+        }
+        i{
+          padding: 1.29rem;
+          text-align: center;
+          color: $white;
+          background-color: $btn-color;
+        }
+      }
+    .button{
+      @include media-breakpoint-down(md) { 
+        font-size: .6rem;
+        padding: .5rem 1rem;
+      }
+      display: inline-block;
+      color: $white;
+      text-transform: uppercase;
+      font-size: .8rem;
+      padding: 1.03rem 1.3rem;
+      letter-spacing: $letter-spacing;
+      background-color: $btn-color;
+      transition: all .5s ease;
+      border:$border;
+      &:hover{
+        background-color:$white;
+        color: $btn-color;
+      }
+    }
+    .button-gray{
+      display: inline-block;
+      color:$white;
+      text-transform: uppercase;
+      font-size: .8rem;
+      padding: .9rem 1.3rem;
+      letter-spacing: $letter-spacing;
+      background-color: $gray-color;
+      border:.1rem solid $gray-color;
+      transition: all .5s ease;
+      text-align: center;
+      &:hover{
+        background-color:$white;
+        color: $brown;
+      }
+    }
+    .btn-gray{
+      display: inline-block;
+      color: $white;
+      text-transform: uppercase;
+      font-size: .8rem;
+      padding: 1rem 1.3rem;
+      letter-spacing: .1rem;
+      background-color: $btn-color;
+      transition: all .5s ease;
+      background-color: $btn-color2;
+      border:.1rem solid $btn-color2;
+      &:hover{
+        background-color:$white;
+        color: $btn-color2;
+      }
+      @include media-breakpoint-down(md) {
+        font-size: .6rem;
+        padding: .5rem 1rem;
+      }
+    }    
+    .card-body{
+      background-color: $gray;
+      padding:1.7rem;
+      p{
+        font-size: .8rem;
+        color:$main-text;
+      }
+      a{ 
+        text-transform: uppercase;
+        letter-spacing:$letter-spacing;
+        font-size: .7rem;
+        padding: .5rem;
+        font-weight: bold;
+        &:hover{
+          border-bottom: $border;
+        }
+      }
+      .list-unstyled{
+        a:hover{
+          border: none;
+        }
+      }
+    }
+    .title-event{
+      background-color: $header-background!important;
+    }
+    .carousel-control-prev,.carousel-control-next{
+      opacity: 1;
+      .carousel-control{
+        i{
+          background: $brown;
+          padding: 1rem;
+          &:hover{
+            background:$testimonials-color;
+          }
+        }
+      }
+    }  
+    .arrows{
+      padding: 3rem .5rem;
+      text-transform: uppercase;
+      @include media-breakpoint-down(lg) { 
+        padding: 1rem;
+      }
+      @include media-breakpoint-down(sm) { 
+        padding-bottom: 1rem;
+      }
+      .arrow-left{
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+        @extend %arrow;
+      }
+      .arrow-right{
+        transform: rotate(135deg);
+        -webkit-transform: rotate(-45deg);
+        @extend %arrow;
+      }
+      a{
+        color: $main-text;
+        font-size: .9rem;
+          &:hover{
+          color:$btn-color;
+          transition:all .5s ease;
+          border-bottom: $border;
+        }
+      }
+      ul{
+        li{
+          a{
+            margin-right: 1rem;
+          }
+          &:last-of-type{
+            margin-right: 0;
+          }  
+        }
+      }
+    }
+    form.block{
+      display: block;
+    }
+    .header-slider{
+      position: relative;
+      
+      .carousel{
+        @extend %position;
+        width: 100%;
+        height:50%;
+        img{
+          width: 100%;
+          height:auto; 
+        }
+        .overlay{
+          position:absolute;
+          @extend %position;
+          width: 100%;
+          height: auto; 
+          background:linear-gradient(90deg, rgba(25,25,23,.55) 6%, rgba(23,22,20,.55) 100%);
+          .text{
+            position: absolute;
+            top: 50%;
+            p{
+              animation: motion 1.5s ease-in 1;
+              margin-bottom: .5rem;
+              font-size: .75rem;
+              letter-spacing:.2rem;
+              @include media-breakpoint-down(sm) { 
+                font-size: .5rem;
+                margin-bottom: 0;
+              }
+            }
+            h2{
+              animation:motion 1.5s ease-in 1;
+              font-family:  $font-family;
+              font-size: 4rem;
+              margin-bottom: 2.5rem;
+              @include media-breakpoint-down(lg) { 
+                font-size: 2.3rem;
+                margin-bottom: 1.5rem;
+               }
+               @include media-breakpoint-down(sm) { 
+                font-size: .8rem;
+                margin-bottom: 0;
+               }
+            }
+            .button{
+              animation:motion 1.9s ease-in 1;
+            }
+          }
+        }
+        .fa-angle-double-down{
+          animation: float 3s ease-out infinite;
+          position: absolute;
+          bottom: 3rem;
+          left: 50%;
+        }
+        .right-btn{
+          position: absolute;
+          top: 50%;
+          right: 1.5rem;
+          .hr1,.hr2{
+           background-color:$white;
+           margin: .4rem;
+          }
+          .hr1{
+            width: 3rem;
+            @include media-breakpoint-down(md) {
+             width: 1.5rem;
+            }
+          }
+          .hr2{
+            width: 1rem;
+            @include media-breakpoint-down(md) {
+              width: .5rem;
+            }
+          }
+        }
+      }
+    }
+    .about-us,.page-title{
+      position: relative;
+      display: flex;
+      justify-content:center;
+      text-align: center;
+      background: black;
+      width: 100%;
+        h1{
+          font-family: $font-family;
+          text-transform: capitalize;
+          color: $white;
+        }
+      }
+      .page-title{
+        background-color: $page-title;
+      }
+    }
+    .description{
+      background-color:$gray;
+      margin: 1rem;
+      padding: 4.5rem 0;
+    }
+    .hotel{
+      margin:1rem 0;
+    }
+    .activities{
+      padding: 5rem 0;
+      @include media-breakpoint-down(lg) {
+        padding: 1rem 0;
+      }
+      .col-lg-4{
+        @extend %scale;
+        p{
+          color: $main-text;
+        }
+        a{
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: .8rem;
+          color:$blue;
+          letter-spacing:$letter-spacing;
+          &:hover{
+            border-bottom: .15rem solid $blue;
+            transition:all .2s;
+          }
+        }
+      } 
+    }
+    .check-availability{
+      padding: 2rem;
+      p{
+        text-transform: uppercase;
+        font-size: .75rem;
+        margin-bottom: 0;
+        letter-spacing: $letter-spacing;
+      } 
+      input{
+        font-size: 1.25rem;
+        font-family: $font-family;
+        border:none;
+      }
+      .check-btn{
+        background-color: $btn-color;
+        font-size: .65rem;
+        color: $white;
+        text-transform: uppercase;
+        border:$border;
+        padding: 1rem;
+        transition:all .5s ease;
+        display: block;
+        @include media-breakpoint-down(md) {
+         padding: 2rem;
+        }
+        &:hover{
+          background: transparent;
+          color: $btn-color;
+        }
+      }
+      .row{
+        &>div{
+          padding: 1.5rem;
+          @include media-breakpoint-down(lg) {
+            padding: .5rem;
+             @include media-breakpoint-down(md) {
+              &:last-of-type{
+                padding: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    .about{
+      background-color:$gray;
+      padding: 5rem 2rem;
+      .col-lg-6 {
+        position: relative;
+        &:after{
+          content: "";
+          position: absolute;
+          top: 1.5rem;
+          right:2.5rem;
+          width: 95%;
+          height: 90%;
+          border:$gray-border;
+          @include media-breakpoint-down(md) {
+            margin-left: 3rem;
+            height: 100%;
+          }
+          @include media-breakpoint-down(xs) {
+             width: 90%;
+          }
+        }
+        @include media-breakpoint-up(lg) {
+          margin-left: 3rem;
+        } 
+      }
+      .text{
+        margin-left:1rem;
+        span{
+          font-family: $font-signature;
+          font-size: 2rem;
+          font-weight: bold;
+        }
+        p{
+          font-size: .7rem;
+          margin-left:2rem;
+        }
+      }
+    }
+    .explore{
+      .col-lg-4{
+        @include media-breakpoint-down(sm) {
+          margin: 0 1rem;
+        }
+      }
+      .card{
+        border:none;
+        &:after{
+        position: absolute;
+        content: "";
+        top: -1rem;
+        right: 1rem;
+        width: 100%;
+        height: 100%;
+        border:$gray-border;
+        z-index: -1;
+        }
+        h3{
+          height: 4rem;
+        }
+        p{
+          overflow: hidden;
+          height: 5rem;
+        }        
+      }
+      .card-body a{
+        color:$btn-color;
+      }
+    }
+    .advantages{
+      color: $white;
+      padding: 3rem 0 4rem;
+      background: linear-gradient(90deg, rgba(25,25,23,.75) 6%, rgba(23,22,20,.75) 100%), url("../img/background.jpg") no-repeat center;
+      background-attachment: fixed;
+      p{
+        font-size: .75rem;
+        color: $gray;
+        @include media-breakpoint-down(md) {
+          margin-bottom: 2rem;
+        }
+      }
+      i{
+        color: $brown;
+        @include media-breakpoint-down(md) {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+    .rooms,.rooms-list{
+      padding:3rem 0;
+      background-color: $gray;
+      ul{
+        li{
+          margin-right: 1rem;
+        }
+        a{
+          font-size: .75rem;
+          font-weight: bold;
+          color: $brown;
+          &:hover{
+            border-bottom: $border;
+          }
+        }
+      }
+      .card{
+        margin: 0 1rem;
+      }
+      .main-card{
+        position: relative;
+        &:after{
+          @extend %after;
+          position: absolute;
+          content: "";
+          top: -1rem;
+          left: 1rem;
+          width: 97%;
+          height: 107%;
+          border:$gray-border;
+          @include media-breakpoint-down(md) { 
+            width: 100%;
+            height: 105%
+          }
+        }
+        .card-body {
+          background: $white;
+          padding: 2.3rem;
+          span{
+            font-family: $font-family;
+            font-size: 1.3rem;
+            color: $brown;
+            font-weight:bold; 
+          }
+          p{
+            color: #959596;
+          }
+        }        
+      }
+      .images{
+        display: flex;
+        justify-content:center;
+        padding-top:.7rem;
+        .card{
+          background: transparent;
+          width: 15rem;
+          img,h6{
+            opacity: .5;
+          }
+          &:active{
+            img,h6{
+              opacity: 1;
+          }
+          .card-body{
+            background: transparent;
+          }
+          }
+        }
+      } 
+    }
+    .rooms-list{
+      padding: 3rem 0;
+      background-color:$white;
+      .card{
+        margin-top: 4rem;
+        &:after{
+          @extend %after;
+          top: -1.5rem;
+          right: -1.5rem;
+          width: 100%;
+          height: 107%;
+        }
+        .col-lg-5{
+          background-color: $gray;
+          z-index: 1;
+        }
+      }
+      .sidebar{
+        background-color: black;
+        color: white;
+        padding: 1rem;
+        span{
+          font-size: .75rem;
+          color:$btn-color2;
+        }
+        .select-date{
+          position: relative;
+          border-bottom: .02rem solid $btn-color2;
+          padding-top:1rem;
+        label{
+          font-size: .65rem;
+          text-transform: uppercase;;
+          color: $btn-color2;
+          margin-bottom: 0;
+        }
+        input{
+          background: transparent;
+          border:none;
+          padding-bottom:.5rem;
+          font-size: .8rem;
+          color: $white;
+          width: 100%;
+           outline-style:none;
+        }
+        .col-6{
+          select{
+            width: 100%;
+            padding-bottom: .5rem;
+            background: transparent;
+            border:none;
+            outline-style:none;
+            color: $white;
+            option{
+              color: $main-text;
+            }
+          }
+        }
+      }
+        .form-check{
+          label{
+            padding-left: .3rem;
+          }
+        }    
+      }
+    }
+    .banner{
+      position: relative;
+      cursor: pointer;
+      .overlay{
+        position: absolute;
+        background: hsla(30, 38%, 61%, .7);
+        top: 0;
+        bottom:0;
+        right: 0;
+        left: .2rem;
+        width: 84%;
+        height:90%;
+        margin: auto;
+        opacity: 0;
+      }
+      .text-overlay{
+        position: absolute; 
+        top:25%;
+        margin:.7rem;
+        padding: 0 1.5rem;
+        opacity: 0;
+        h4,p,a{
+          color: $white;
+        }
+        a{
+          font-size: .6rem;
+          letter-spacing: $letter-spacing;
+        }
+      }
+        @include media-breakpoint-down(md) { 
+         .overlay, .text-overlay{
+            display: block;
+         } 
+         .overlay {
+            width: 95%;
+         } 
+       }
+        @include media-breakpoint-down(sm) {
+          .overlay {
+            width: 92%;
+          } 
+        }
+      &:hover{
+        .text-overlay,.overlay{
+          opacity: 1;
+          transition: all .5s linear;
+          a:hover{
+            border-bottom: .2rem solid white;
+          }
+        }
+      }
+    }
+    .other-rooms{
+      .row{
+        @include media-breakpoint-down(md) { 
+          margin-bottom: 1rem;
+        }
+      }
+      a{
+        color: black;
+        &:hover{
+          color: $btn-color;
+        }
+      }
+    }
+    .single_page{
+      padding: 3rem 0;
+      ul{
+        display: flex;
+        flex-direction: row;
+        padding-top: 1.5rem;
+        img{
+          max-width: 8.5rem;
+          height: 5.5rem;
+          padding-right: .5rem;
+            @include media-breakpoint-down(xs) { 
+            max-width: 6.3rem;
+            }
+        }
+      }
+      .tab{
+        border-right:$gray-border;
+        .active{
+          padding-right: 2.6rem;
+          border-right:$border;
+          color: $btn-color!important;
+        }
+        .nav-link{
+          text-transform: uppercase;
+          font-family: $font-family;
+          font-weight: bold;
+          color: black;
+        }
+      }
+      .content{
+        a{
+          font-size: .75rem;
+          text-transform: uppercase;
+          color: $brown;
+          font-weight: bold;
+        }
+        .facilities {
+          ul{
+            display: flex;
+            flex-direction: column;
+            li{
+             color:$main-text;
+             padding: .5rem 0;
+              i{
+                padding-right: 1rem;
+                color: $btn-color;
+              }
+            }
+          }  
+        }
+        tr:hover{
+          background-color:$gray;
+        }
+        .score{
+          background: $gray;
+          text-align: center;
+          padding: 1.5rem 2rem;
+          line-height: 1.6rem;
+          margin: .5rem;
+          @include media-breakpoint-down(sm) { 
+            margin: 1.5rem;
+          }
+          span{
+             font-family: $font-family; 
+            &:first-of-type{
+            text-align: center;
+            font-size: 2.5rem;
+            color: $btn-color;
+            } 
+          } 
+        }
+        .progress-bars{
+          @include media-breakpoint-down(sm) { 
+            padding:1.5rem;
+          }
+          span{
+            font-size: .75rem;
+          }
+          .bar{
+            width: 100%;
+            height: .2rem;
+            margin-bottom: .5rem;
+            background: $gray;
+            .progress{
+              width: 85%;
+              height: .2rem;
+              background: $btn-color;
+            }
+          }
+        }
+        .reviews{
+          img{
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+          }
+          h4{
+            padding-bottom: 1rem;
+          }
+          h6{
+            font-family: $font-family;
+          }
+          .col-lg-10{
+            span{
+              font-size: .7rem;
+              text-transform: uppercase;
+              color: gray;
+            }
+            li{
+              color: orange;
+            }
+          }
+        }
+        .add-review{
+          form{
+            display: block;
+            padding-bottom: 1rem;
+            li{
+              color: gray;
+              &:hover{
+                color: orange;
+              }
+            }
+            input,textarea{
+              background-color: $gray;
+              border-radius: 0;
+            }
+          }
+        }
+      } 
+    }
+    .find-event{
+      form{
+        padding: 3rem 0;
+        @include media-breakpoint-down(md) { 
+          padding-bottom: 2rem;
+        }
+        input, select{
+          color: $main-text;
+          font-size: .8rem;
+          background-color: $gray;
+          border-radius: 0;
+        }
+        .search-event{
+          input{
+            width: calc(100% - 10rem);
+          }
+           a{
+            color: $white;
+            font-size: .7rem;
+            background-color: $dark;
+            padding: .42rem 1.5rem;
+            letter-spacing: $letter-spacing;
+            border: .1rem solid $dark;
+            &:hover{
+              background: transparent;
+              color: $dark;
+            }
+          }
+        } 
+      }
+      .align{
+        .input{
+          background: $gray;
+          padding: .35rem;
+          border: $gray-border;
+          color: $main-text;
+          font-size: .8rem;
+          cursor: pointer;
+        }
+      }
+    }
+    .event-list{
+      @extend %scale;
+      h3{
+        padding-bottom: 2rem;
+        @include media-breakpoint-down(md) { 
+          padding-bottom: 0;
+        }
+      }
+      .date{
+        h2,span{
+          color: $btn-color;
+          font-family: $font-family;
+        }
+        span{
+          font-size: .9rem;
+        }
+      }
+      .col-lg-6,.event{
+        background: $gray;
+        p[class="mb-0"],p[class="text-body"] {
+          text-transform: uppercase;
+          font-size: .7rem;
+          letter-spacing: $letter-spacing;
+        }
+        @extend %border-none;
+      }
+    }
+    .event-single{
+      p{
+        color: black;
+        margin-bottom: .2rem;
+      }
+      span{
+        color: $main-text;
+        font-size: .8rem;
+      }
+      .col-lg-8 {
+        ul{
+          margin-top: 1rem;
+          @include media-breakpoint-down(xs) {
+            flex-direction:column;
+            text-align: center;
+           }
+          li{
+            @include media-breakpoint-down(xs) {
+              padding: .5rem .8rem;
+            }
+            padding: .2rem .8rem;
+            margin-right: .3rem;
+          }
+          li:first-of-type {
+            background-color:#3b5998;
+          }
+          li:nth-child(3) {
+            background-color:#33ccff;
+          }
+          li:nth-child(4) {
+            background-color:#d73d32;
+          }
+          li:nth-child(5) {
+            background-color:#bd081c;
+          }
+          li:nth-child(5) {
+            background-color:#858585;
+          }
+          a{
+            @extend %uppercase;
+            font-size: .7rem;
+            color: $white;
+            i{
+              padding-right: .3rem;
+            }
+          }
+        }
+      }
+    }
+    .related-events{
+      padding: 2rem 0 2rem;
+      @extend %border-none;
+      @extend %scale;
+    }
+    .gallery{
+      margin: 3rem 0;
+      @extend %scale; 
+      .text-center{
+        background-color: $gray;
+        padding: 1rem; 
+        h4{
+           color: black;
+        }
+        p{
+          color: $btn-color;
+        }
+        a{
+          @extend %uppercase;
+          &:after{
+            @extend %border-bottom;
+          }
+          &:hover:after{
+            margin:0 10rem 0 10rem; 
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+    .distances{
+      background-color: $btn-color;
+      text-align: center;
+      color: $white;
+      padding: 5rem 0 5rem;
+      span{
+        text-transform: uppercase;
+        letter-spacing: $letter-spacing;
+      }
+      p{
+        font-weight: bold; 
+        span{
+          font-weight: normal;
+          padding-left: 1rem; 
+        }
+      }
+    }
+    .contact-form{
+      background-color: $gray;
+      padding: 5rem 0 5rem;
+    }
+    .letter{
+      background-color: $btn-color;
+      padding: .5rem 0;
+      h3,i{
+        color: $white;
+      }
+      ul{
+        justify-content:center;
+        padding-top: 1rem;
+      }
+    }
+    .testimonial{
+      background-color:$btn-color;
+      padding: 2rem 0;
+      .carousel-item{
+        h4{
+          font-family: 'Old Standard TT', serif;
+          font-style: italic;
+          line-height: 3rem;
+          font-weight: lighter;
+          @include media-breakpoint-down(md) {
+            font-size: 1.5rem;
+            line-height: 2rem;
+          }
+        }
+        .row{
+          display: flex;
+          justify-content:center;
+          padding:2rem 0 2rem;
+        }
+        .pagination{
+          padding-top: 1.5rem;
+          .line1 {
+            width: 2rem;
+            height: .1rem;
+            margin-right: .4rem;
+            background-color: $white;
+          }
+          .line2 {
+            width: .5rem;
+            height: .1rem;
+            margin-right: .4rem;
+            background-color: $white;
+          }
+        }
+      }
+    }
+    .news{
+      padding: 4rem 0 5.5rem;
+      background-color:$gray;
+      .col-lg-4{
+        margin-top:1.5rem;
+        cursor: pointer;
+        @include media-breakpoint-down(sm) {
+         padding: 0 2rem ;
+        }
+      }
+      .card{
+        border:none;
+        transition: all .2s ease-in-out;
+        .card-body{
+          background-color:$white;
+          z-index: 1;
+          a{
+            color: $brown;
+          }
+          .card-text{
+            height: 5rem;
+            overflow: hidden;
+          }
+          .card-title{
+            height: 4.5rem;
+            overflow: hidden;
+          }
+        }
+        &:hover{
+          transform: scale(1.02);
+        }
+        &:after{
+          @extend %after;
+          top:2.1rem;
+          right: 2rem;
+          width: 81%;
+          height: 50%;
+          @include media-breakpoint-down(sm) { 
+            top:2rem;
+            right: 2rem;
+            width: 85%; 
+            height: 60%;
+          }
+          @include media-breakpoint-down(sm) {
+           right: 1.4rem;
+          }
+        }
+      } 
+    }
+    .parteners{
+      background-color: $white;
+      padding: 2rem;
+      .logos{
+        display: flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:center;
+        img{
+          width: 10rem;
+          padding: 0 1rem;
+        }
+      } 
+    }
+    .fotos{
+      img{
+        transition: all .4s ease-in-out;
+        &:hover{
+          transform: scale(1.01);
+        }
+      }
+      li{
+        @include media-breakpoint-down(md) { 
+          &:nth-child(2n){
+            img{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .socials{
+      padding: 5rem 0;
+      @include media-breakpoint-down(md) {
+        padding: 3rem 0;
+      }
+      span{
+        font-size: .75rem;
+        color:$main-text;
+      }
+      .conect{
+        @include media-breakpoint-down(md) { 
+          border:none;
+        } 
+        border-right:$gray-border;
+      }
+      .weather{
+        @include media-breakpoint-down(md) {  
+          border:none;
+        }
+        border-right: $gray-border;
+        .row{
+          display: flex;
+          justify-content:center;
+          p{
+            font-size: 2.5rem;
+            font-family: $font-family;
+          }
+          span{
+            font-size: 2.5rem;
+            font-family: $font-family;
+            color: $btn-color;
+          }
+          i{
+            color: $btn-color;
+            margin-top:1rem;
+            margin-right: 1rem;
+          }
+        }
+      }
+      ul{
+        display: flex;
+        flex-direction:row;
+        justify-content:center;
+        margin-top: 2rem;
+        a{
+          margin-right: 1.8rem;
+          color: $btn-color;
+        }
+      }
+      form{
+        i{
+          background-color: $btn-color;
+          color: $white;
+        }
+      }
+    }
+    .city-hotel,.excursions{
+      margin: 1rem;
+      .text-center{
+        padding: 1rem 0;
+        @include media-breakpoint-only(xl) {
+          padding: 2rem 7rem; 
+        }
+         @include media-breakpoint-down(sm) {
+          padding: 2rem 1rem;
+        }
+      }
+      .col-xl-4{
+        display: flex;
+        align-items:center;
+        background-color: $gray;
+      }
+    }
+    .offers{
+      color: $white;
+      .col-lg-4{
+        position: relative;
+        padding: 4rem;
+        .text{
+          width: 100%;
+          height: 100%;
+          padding: 2rem;
+          background-color:$second-color;
+          opacity: .9;
+          h2{
+            height: 9rem;
+          }
+          .text-muted{
+            height: 5rem;
+            overflow: hidden;
+          }
+          @include media-breakpoint-down(lg) { 
+            h2{
+              height: auto;
+            }
+          }  
+          &:after{
+            @include media-breakpoint-down(sm) {
+            width: 90%;
+            height: 83%;
+            }
+            @include media-breakpoint-down(xs) {
+              width: 87%;
+              height: 87%;
+            }
+            @extend %after;
+            top: 2rem;
+            left:2rem;
+            width: 86%;
+            height: 86%;
+            z-index: -1;
+          }
+        }
+        .background{
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          top:0;
+          left:0;
+          right: 0;
+          bottom: 0;
+          z-index: 0;
+          position: absolute;
+        }
+        a{
+          &:after{
+            @extend %border-bottom;
+          }
+          &:hover:after{
+              transform: scaleX(1);
+              transform-origin: 0% 50%;
+              margin:  0 5rem auto;
+            }
+          }
+        }
+      }
+      .news-letter{
+        .col-lg-4{
+          padding: 4rem;
+          color: $white;
+          background-color:$second-color;
+          .form-inline{
+            i{
+              background-color: black;
+              color: $white;
+            }
+          }
+        }
+        .col-lg-8{
+          padding: 2rem 0 3rem;
+          background-color: $gray;
+          .col-md-4{
+            position: relative;
+            z-index: 3;
+            margin-top: 3rem;
+            @include media-breakpoint-up(md) {
+              &:first-of-type {
+                margin-right: 4rem;
+              }
+            }
+            @include media-breakpoint-down(sm) {
+              margin: 2rem 3rem;
+            }
+            &:after {
+              @extend %after;
+              top: -2rem;
+              left:-2rem;
+              width: 100%;
+              height: 100%;
+              z-index: -1;
+            }
+            .bg-white{
+              padding: 1.5rem;
+              span{
+                font-size: .7rem;
+                color: $main-text;
+                text-transform: uppercase;
+                letter-spacing: $letter-spacing;
+              }
+              p{
+                color: $main-text;
+                padding: .5rem 0;
+              }
+              a{
+                text-transform: uppercase;
+                font-size: .7rem;
+                font-weight: 900;
+                color: $second-color;
+              }
+            }
+          } 
+        }
+      }
+    .contact{
+      padding: 5rem 0;
+      @include media-breakpoint-down(md) { 
+        padding: 2rem 0;    
+      }
+    }
