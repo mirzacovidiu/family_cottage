@@ -82,7 +82,7 @@ body .blue-hover:hover {
       header button {
         float: right; } }
     header.scroll {
-      background: #000; }
+      background: rgba(226, 218, 208, 0.315); }
     @media (max-width: 991.98px) {
       header .menu {
         width: 100%;
